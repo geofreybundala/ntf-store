@@ -7,6 +7,8 @@ const Home = () => {
         <Header/>
         <Welcome/>
         <Items title="New in"/>
+        <Items title="Special offer"/>
+        <Items title="Recommended for you"/>
     </div>
    ) 
 }
