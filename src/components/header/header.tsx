@@ -1,4 +1,4 @@
-import {AiOutlineHeart, AiOutlineShoppingCart ,AiOutlineAudio} from "react-icons/ai"
+import {AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai"
 import { FaRegUser } from "react-icons/fa"
 import { BiSupport } from "react-icons/bi"
 import { GoLocation } from "react-icons/go"
@@ -45,7 +45,7 @@ const Header = () => {
                     </div>
                 )
             })}
-
+            
             <div className="">
             <div className="relative">
             <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
