@@ -1,4 +1,3 @@
-import cover from "./../../assets/images/cover.jpg"
 import Carousel from 'framer-motion-carousel'
 import {covers} from "./utils/List"
 

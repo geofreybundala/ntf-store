@@ -8,7 +8,7 @@ const Items = (props: any) => {
                 {props.title}
             </div>
 
-            <div className="flex p-1">
+            <div className="flex p-1 snap-x">
                 {NewIn.map
                     (({image, old_price, new_price,title}, key) => (
                         <Card  image={image} old_price={old_price} new_price={new_price} title={title} key={key}/>

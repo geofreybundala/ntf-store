@@ -1,9 +1,9 @@
 import {AiOutlineHeart} from "react-icons/ai";
 const Card = (props:any) => {
     return (
-        <div className="w-48 border-gray-200 rounded px-1 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100">
+        <div className=" border-gray-200 rounded px-1 scroll-ml-6 snap-start transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100">
 
-        <div className="h-36 w-42 bg-cover bg-center" style={{backgroundImage: `url(${props.image})`}}>
+        <div className="h-36 w-48 bg-cover bg-center" style={{backgroundImage: `url(${props.image})`}}>
             <div className="relative">
                 <div className="absolute top-0 right-0">
                     <div className="bg-white m-2 rounded transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-150">
