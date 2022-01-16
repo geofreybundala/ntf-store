@@ -6,9 +6,9 @@ const Home = () => {
     <div>
         <Header/>
         <Welcome/>
-        <Items title="New in"/>
+        {/* <Items title="New in"/>
         <Items title="Special offer"/>
-        <Items title="Recommended for you"/>
+        <Items title="Recommended for you"/> */}
     </div>
    ) 
 }

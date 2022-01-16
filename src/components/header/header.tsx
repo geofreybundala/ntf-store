@@ -2,15 +2,29 @@ import {AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai"
 import { FaRegUser } from "react-icons/fa"
 import { BiSupport } from "react-icons/bi"
 import { GoLocation } from "react-icons/go"
+import {BsSearch} from "react-icons/bs"
+import { AiOutlineMenu } from "react-icons/ai";
 import {menuList} from "./utils/List"
 
 const Header = () => {
    return ( 
-    <div className="p-5 mx-4">
+    <div className="p-2 md:p-5 md:mx-4">
         <div className="flex justify-between">
-            <div className="bg-gradient-to-r text-transparent bg-clip-text from-green-400 to-purple-500">NTF-store</div>
+            <div className="flex items-center md:hidden gap-2">
+                <div>
+                    <AiOutlineMenu/>
+                </div>  
+                <div className="bg-gradient-to-r text-transparent bg-clip-text from-green-400 to-purple-500">
+                    NTF-store
+                </div>
+            </div>
+
+            <div className="hidden md:block bg-gradient-to-r text-transparent bg-clip-text from-green-400 to-purple-500">
+                NTF-store
+            </div>
+
             <div className="flex space-x-11">
-                <div className="flex space-x-2">
+                <div className="hidden md:flex md:space-x-2">
                     <div className="flex items-center space-x-1">
                         <BiSupport/>
                         <span>  Support</span>
@@ -22,11 +36,23 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                <div><AiOutlineHeart/></div>
-                <div><FaRegUser/></div>
-                <div><AiOutlineShoppingCart/></div>
-              </div>
+                <div className="flex items-center space-x-4 sm:m-2">
+                    <div className="hidden md:block"><AiOutlineHeart/></div>
+                    <div className="sm:block md:hidden ">
+                        <BsSearch className="mx-auto"/>
+                        <span className="uppercase font-light text-sm">Search</span>
+                    </div>
+
+                    <div className="font-light text-sm  flex flex-col justify-center">
+                        <FaRegUser className="mx-auto"/>
+                        <div className="md:hidden uppercase font-light text-sm">Account</div>
+                    </div>
+
+                    <div className="text-center font-light text-sm flex flex-col justify-center">
+                        <AiOutlineShoppingCart className="mx-auto"/>
+                        <span className="md:hidden uppercase font-light text-sm">Cart</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -36,7 +62,7 @@ const Header = () => {
             </div> */}
         </div>
 
-        <div className="flex justify-between mt-1 items-center">
+        <div className="hidden md:flex md:justify-between md:mt-1 md:items-center">
 
             {menuList.map((menu,index) => {
                 return (
