@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 import Product from './pages/Product';
 
 export const Main = () => {
@@ -7,6 +8,7 @@ export const Main = () => {
         <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/product/:id' element={<Product/>} />
+            <Route path='*' element={<NotFound />}/>
         </Routes>
     )
 }
