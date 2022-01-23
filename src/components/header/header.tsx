@@ -3,23 +3,31 @@ import { FaRegUser } from "react-icons/fa"
 import { BiSupport } from "react-icons/bi"
 import { GoLocation } from "react-icons/go"
 import {BsSearch} from "react-icons/bs"
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import {menuList} from "./utils/List"
+import SideBar from "../sidebar/SideBar"
+import { useState } from "react"
 
 const Header = () => {
+    const [showSidebar, setShowSidebar] = useState(false);   
    return ( 
     <div className="p-2 md:p-5 md:mx-4">
         <div className="flex justify-between">
-            <div className="flex items-center md:hidden gap-2">
+            <div className="flex items-center gap-2 md:hidden">
                 <div>
-                    <AiOutlineMenu/>
+                {showSidebar ?
+                    <AiOutlineClose onClick={() => setShowSidebar(!showSidebar)}/>:
+                    <AiOutlineMenu onClick={() => setShowSidebar(!showSidebar)}/>
+                    
+                    
+                }   
                 </div>  
-                <div className="bg-gradient-to-r text-transparent bg-clip-text from-green-400 to-purple-500">
+                <div className="text-transparent bg-gradient-to-r bg-clip-text from-green-400 to-purple-500">
                     NTF-store
                 </div>
             </div>
 
-            <div className="hidden md:block bg-gradient-to-r text-transparent bg-clip-text from-green-400 to-purple-500">
+            <div className="hidden text-transparent md:block bg-gradient-to-r bg-clip-text from-green-400 to-purple-500">
                 NTF-store
             </div>
 
@@ -40,23 +48,23 @@ const Header = () => {
                     <div className="hidden md:block"><AiOutlineHeart/></div>
                     <div className="sm:block md:hidden ">
                         <BsSearch className="mx-auto"/>
-                        <span className="uppercase font-light text-sm">Search</span>
+                        <span className="text-sm font-light uppercase">Search</span>
                     </div>
 
-                    <div className="font-light text-sm  flex flex-col justify-center">
+                    <div className="flex flex-col justify-center text-sm font-light">
                         <FaRegUser className="mx-auto"/>
-                        <div className="md:hidden uppercase font-light text-sm">Account</div>
+                        <div className="text-sm font-light uppercase md:hidden">Account</div>
                     </div>
 
-                    <div className="text-center font-light text-sm flex flex-col justify-center">
+                    <div className="flex flex-col justify-center text-sm font-light text-center">
                         <AiOutlineShoppingCart className="mx-auto"/>
-                        <span className="md:hidden uppercase font-light text-sm">Cart</span>
+                        <span className="text-sm font-light uppercase md:hidden">Cart</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div className="border-b-2 border-gray-300 mt-1">
+        <div className="mt-1 border-b-2 border-gray-300">
             {/* <div className="">
                 <span>Art</span>
             </div> */}
@@ -66,7 +74,7 @@ const Header = () => {
 
             {menuList.map((menu,index) => {
                 return (
-                    <div className="uppercase text-sm font-light" key={index}>
+                    <div className="text-sm font-light uppercase" key={index}>
                         <span>{menu.name}</span>
                     </div>
                 )
@@ -74,14 +82,14 @@ const Header = () => {
             
             <div className="">
             <div className="relative">
-            <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg className="w-5 h-4 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
             </div>
             <input type="text"  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm block w-full pl-10 p-1.5  dark:placeholder-gray-400 dark:focus:ring-gray-100 dark:focus:border-gray-100" placeholder="search product"/>
             </div>
             </div>
         </div>
-
+        <SideBar status={showSidebar} />
     </div>
 
     )
