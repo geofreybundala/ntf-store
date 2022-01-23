@@ -10,8 +10,8 @@ const Items = (props: any) => {
 
             <div className="flex p-1 overflow-x-scroll">
                 {NewIn.map
-                    (({image, old_price, new_price,title}, key) => (
-                        <Card  image={image} old_price={old_price} new_price={new_price} title={title} key={key}/>
+                    (({image, old_price, new_price,title,id}, key) => (
+                        <Card  image={image} old_price={old_price} new_price={new_price} id={id} title={title} key={key}/>
                     ))
                 }
             </div>
