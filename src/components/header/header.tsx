@@ -6,7 +6,8 @@ import {BsSearch} from "react-icons/bs"
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import {menuList} from "./utils/List"
 import SideBar from "../sidebar/SideBar"
-import { useState } from "react"
+import { useState } from "react";
+import {Link } from "react-router-dom";
 
 const Header = () => {
     const [showSidebar, setShowSidebar] = useState(false);  
@@ -30,9 +31,9 @@ const Header = () => {
                 </div>
             </div>
 
-            <div className="hidden text-transparent md:block bg-gradient-to-r bg-clip-text from-green-400 to-purple-500">
+            <Link to={"/"} className="hidden text-transparent md:block bg-gradient-to-r bg-clip-text from-green-400 to-purple-500">
                 NTF-store
-            </div>
+            </Link>
 
             <div className="flex space-x-11">
                 <div className="hidden md:flex md:space-x-2">
