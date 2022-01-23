@@ -9,7 +9,10 @@ import SideBar from "../sidebar/SideBar"
 import { useState } from "react"
 
 const Header = () => {
-    const [showSidebar, setShowSidebar] = useState(false);   
+    const [showSidebar, setShowSidebar] = useState(false);  
+    const closeSideBar = () => {
+        setShowSidebar(!showSidebar);
+    } 
    return ( 
     <div className="p-2 md:p-5 md:mx-4">
         <div className="flex justify-between">
@@ -89,7 +92,7 @@ const Header = () => {
             </div>
             </div>
         </div>
-        <SideBar status={showSidebar} />
+        <SideBar func={closeSideBar} status={showSidebar} />
     </div>
 
     )
