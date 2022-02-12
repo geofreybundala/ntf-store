@@ -56,7 +56,7 @@ const Header = () => {
                     </div>
 
                     <div className="flex flex-col justify-center text-sm font-light">
-                        <FaRegUser className="mx-auto"/>
+                        <Link to="/login"><FaRegUser className="mx-auto"/></Link>
                         <div className="text-sm font-light uppercase md:hidden">Account</div>
                     </div>
 
