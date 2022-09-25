@@ -4338,10 +4338,10 @@ fraction.js@^4.1.2:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.1.2.tgz#13e420a92422b6cf244dff8690ed89401029fbe8"
   integrity sha512-o2RiJQ6DZaR/5+Si0qJUIy637QMRudSi9kU/FFzx9EZazrIdnBgpU+3sEWCxAVhH2RtxW2Oz+T4p2o8uOPVcgA==
 
-framer-motion-carousel@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/framer-motion-carousel/-/framer-motion-carousel-1.0.6.tgz#93352ed7ed77d09544eaf2e4b05b624d46c1d1bb"
-  integrity sha512-sAGBIMq0ER91HKQES0YPegSd5Nhsyb5dDbMqvvtkqPLx6DIjRCKzsICZVBp8HByOZOCol5pD8hC4FfvtZxqAHg==
+framer-motion-carousel@1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/framer-motion-carousel/-/framer-motion-carousel-1.0.7.tgz#9ca1951117fa4f5d3a6e48563641f244afd72580"
+  integrity sha512-pUr4Z+lc910+uyrTAhesu+o2NgAeKp+wUDyj7RaxthDCZ5ToSJCSlsyvwIzkuzYjQE+81L0z2xaWSL5gH9YBIg==
   dependencies:
     framer-motion "^4.1.17"
 
